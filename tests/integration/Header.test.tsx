@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { Header } from '../../src/components/Header';
 import { useEditorStore } from '../../src/store/editorStore';
 import { I18nProvider } from '../../src/i18n';
+import { ThemeProvider } from '../../src/theme/ThemeProvider';
 
 // Mock the store en conservant la forme rÃ©elle (ui inclus) et en supportant
 // aussi bien useEditorStore() que useEditorStore(selector).
@@ -35,9 +36,11 @@ describe('Header Component', () => {
   it('renders project name', () => {
     useEditorStore.setState({ projectName: 'Test Project' });
     render(
-      <I18nProvider>
-        <Header isSidebarVisible={true} onToggleSidebar={() => {}} />
-      </I18nProvider>
+      <ThemeProvider>
+        <I18nProvider>
+          <Header isSidebarVisible={true} onToggleSidebar={() => {}} />
+        </I18nProvider>
+      </ThemeProvider>
     );
     expect(screen.getByText('Test Project')).toBeInTheDocument();
   });

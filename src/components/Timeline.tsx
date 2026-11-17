@@ -1582,12 +1582,12 @@ export const Timeline: React.FC = () => {
             <>
               {/* Backdrop overlay */}
               <div
-                className="fixed inset-0 bg-black/50 z-50"
+                className="fixed inset-0 bg-black/50 z-[120]"
                 onClick={() => setShowAddTrackMenu(false)}
                 aria-hidden="true"
               />
               {/* Centered modal */}
-              <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+              <div className="fixed inset-0 flex items-center justify-center z-[120] pointer-events-none">
                 <div
                   className="bg-gray-800 border border-gray-700 rounded-xl shadow-2xl p-6 min-w-[280px] pointer-events-auto animate-in fade-in zoom-in-95 duration-150"
                   role="dialog"
@@ -1888,6 +1888,7 @@ export const Timeline: React.FC = () => {
         setContextMenu={setContextMenu} 
         setCopiedClip={setCopiedClip} 
         setCopiedText={setCopiedText}
+        menuRef={contextMenuRef}
         isPhone={isPhone} 
       />
     </div>
