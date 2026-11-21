@@ -38,7 +38,7 @@ const renderTimeline = () =>
 
 describe('Timeline clip context menu', () => {
   beforeEach(() => {
-    localStorage.setItem('jemaos_lang', 'fr');
+    localStorage.setItem('wings8os_lang', 'fr');
     useEditorStore.setState({
       mediaFiles: [
         {

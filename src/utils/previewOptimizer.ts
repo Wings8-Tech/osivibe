@@ -1,4 +1,4 @@
-// Copyright (c) 2025 Jema Technology.
+// Copyright (c) 2025 Wings8 Technology.
 // Distributed under the license specified in the root directory of this project.
 
 /**
@@ -218,9 +218,9 @@ function detectDeviceType(): 'desktop' | 'mobile' | 'tablet' {
 }
 
 /**
- * Detect if running on a mobile device (JemaOS mobile)
+ * Detect if running on a mobile device (Wings8OS mobile)
  */
-function isMobileJemaOS(): boolean {
+function isMobileWings8OS(): boolean {
   const ua = navigator.userAgent;
   return /Android|iPhone|iPad|iPod/i.test(ua);
 }
@@ -340,7 +340,7 @@ function determineQualityFromPerformance(performanceScore: number): { quality: P
 function determineRecommendedQuality(
   isAppleSilicon: boolean,
   isHighEndMobile: boolean,
-  isJemaOSOnMobile: boolean,
+  isWings8OSOnMobile: boolean,
   performanceScore: number,
   cpuCores: number,
   connectionQuality: string
@@ -350,7 +350,7 @@ function determineRecommendedQuality(
     return { quality: 'original', maxSafeResolution: 2160 };
   }
 
-  const mobileResult = determineMobileQuality(isHighEndMobile, isJemaOSOnMobile, performanceScore);
+  const mobileResult = determineMobileQuality(isHighEndMobile, isWings8OSOnMobile, performanceScore);
   if (mobileResult) {
     return mobileResult;
   }
@@ -374,18 +374,18 @@ function determineRecommendedQuality(
 
 function determineMobileQuality(
   isHighEndMobile: boolean,
-  isJemaOSOnMobile: boolean,
+  isWings8OSOnMobile: boolean,
   performanceScore: number
 ): { quality: PreviewSettings['quality']; maxSafeResolution: number } | null {
-  if (!isJemaOSOnMobile && isHighEndMobile) {
+  if (!isWings8OSOnMobile && isHighEndMobile) {
     return { quality: 'original', maxSafeResolution: 1080 };
   }
 
-  if (isJemaOSOnMobile && isHighEndMobile) {
+  if (isWings8OSOnMobile && isHighEndMobile) {
     return { quality: 'high', maxSafeResolution: 720 };
   }
 
-  if (isJemaOSOnMobile) {
+  if (isWings8OSOnMobile) {
     if (performanceScore >= 50) {
       return { quality: 'medium', maxSafeResolution: 480 };
     }
@@ -438,7 +438,7 @@ export function detectHardware(): HardwareProfile {
   const isMobile = deviceType === 'mobile' || deviceType === 'tablet';
   const isAppleSilicon = detectAppleSilicon();
   const isHighEndMobile = isMobile && (isAppleSilicon || detectHighEndMobile());
-  const isJemaOSOnMobile = isMobileJemaOS();
+  const isWings8OSOnMobile = isMobileWings8OS();
   const limitedMemory = hasLimitedMemory();
   const connectionQuality = getConnectionQuality();
   
@@ -453,7 +453,7 @@ export function detectHardware(): HardwareProfile {
   const isLowEnd = determineIsLowEnd(isHighEndMobile, isAppleSilicon, performanceScore, cpuCores, isMobile, limitedMemory);
   
   const { quality: recommendedQuality, maxSafeResolution } = determineRecommendedQuality(
-    isAppleSilicon, isHighEndMobile, isJemaOSOnMobile, performanceScore, cpuCores, connectionQuality
+    isAppleSilicon, isHighEndMobile, isWings8OSOnMobile, performanceScore, cpuCores, connectionQuality
   );
   
   return {
@@ -471,30 +471,30 @@ export function detectHardware(): HardwareProfile {
   };
 }
 
-function applyQualitySettings(settings: PreviewSettings, isJemaOSOnMobile: boolean, profile: HardwareProfile, videoHeight: number) {
+function applyQualitySettings(settings: PreviewSettings, isWings8OSOnMobile: boolean, profile: HardwareProfile, videoHeight: number) {
   switch (settings.quality) {
     case 'low':
       settings.maxResolution = PREVIEW_RESOLUTIONS.low;
-      settings.targetFps = isJemaOSOnMobile ? 20 : 24;
+      settings.targetFps = isWings8OSOnMobile ? 20 : 24;
       settings.frameSkipping = true;
       settings.bufferSize = 'small';
       break;
     case 'medium':
       settings.maxResolution = PREVIEW_RESOLUTIONS.medium;
-      settings.targetFps = isJemaOSOnMobile ? 24 : 30;
-      settings.frameSkipping = profile.isLowEnd || isJemaOSOnMobile;
+      settings.targetFps = isWings8OSOnMobile ? 24 : 30;
+      settings.frameSkipping = profile.isLowEnd || isWings8OSOnMobile;
       settings.bufferSize = 'small';
       break;
     case 'high':
       settings.maxResolution = PREVIEW_RESOLUTIONS.high;
-      settings.targetFps = isJemaOSOnMobile ? 25 : 30;
-      settings.frameSkipping = isJemaOSOnMobile;
+      settings.targetFps = isWings8OSOnMobile ? 25 : 30;
+      settings.frameSkipping = isWings8OSOnMobile;
       settings.bufferSize = 'medium';
       break;
     case 'original':
       settings.maxResolution = videoHeight;
       settings.targetFps = 30; 
-      settings.frameSkipping = isJemaOSOnMobile;
+      settings.frameSkipping = isWings8OSOnMobile;
       settings.useProxy = false;
       settings.bufferSize = 'large';
       break;
@@ -510,7 +510,7 @@ export function getOptimalSettings(
   hardwareProfile?: HardwareProfile
 ): PreviewSettings {
   const profile = hardwareProfile || detectHardware();
-  const isJemaOSOnMobile = isMobileJemaOS();
+  const isWings8OSOnMobile = isMobileWings8OS();
   const limitedMemory = hasLimitedMemory();
   
   const settings: PreviewSettings = { ...DEFAULT_SETTINGS };
@@ -520,8 +520,8 @@ export function getOptimalSettings(
     settings.quality = profile.recommendedQuality;
   }
   
-  // Mobile JemaOS specific optimizations
-  if (isJemaOSOnMobile) {
+  // Mobile Wings8OS specific optimizations
+  if (isWings8OSOnMobile) {
     settings.useLowLatencyMode = true;
     settings.bufferSize = limitedMemory ? 'small' : 'medium';
     
@@ -532,7 +532,7 @@ export function getOptimalSettings(
     }
   }
   
-  applyQualitySettings(settings, isJemaOSOnMobile, profile, videoHeight);
+  applyQualitySettings(settings, isWings8OSOnMobile, profile, videoHeight);
   
   // Determine if proxy is needed
   settings.useProxy = videoHeight > settings.maxResolution;
@@ -645,8 +645,8 @@ export async function getProxyUrl(
   }
 }
 
-function applyMobileJemaOSOptimizations(videoElement: HTMLVideoElement, settings: PreviewSettings, isMobile: boolean, isJemaOSOnMobile: boolean) {
-  if (isJemaOSOnMobile || isMobile) {
+function applyMobileWings8OSOptimizations(videoElement: HTMLVideoElement, settings: PreviewSettings, isMobile: boolean, isWings8OSOnMobile: boolean) {
+  if (isWings8OSOnMobile || isMobile) {
     videoElement.preload = settings.bufferSize === 'large' ? 'auto' : 'metadata';
     
     if ('buffered' in videoElement && settings.bufferSize === 'small') {
@@ -668,8 +668,8 @@ function applyMobileJemaOSOptimizations(videoElement: HTMLVideoElement, settings
   }
 }
 
-function applyCSSOptimizations(videoElement: HTMLVideoElement, settings: PreviewSettings, isHighEnd: boolean, isJemaOSOnMobile: boolean) {
-  if (isHighEnd && !isJemaOSOnMobile) {
+function applyCSSOptimizations(videoElement: HTMLVideoElement, settings: PreviewSettings, isHighEnd: boolean, isWings8OSOnMobile: boolean) {
+  if (isHighEnd && !isWings8OSOnMobile) {
     videoElement.style.willChange = 'auto';
     videoElement.style.transform = '';
     videoElement.style.imageRendering = 'auto';
@@ -678,7 +678,7 @@ function applyCSSOptimizations(videoElement: HTMLVideoElement, settings: Preview
       videoElement.style.filter = '';
     }
     
-  } else if (isJemaOSOnMobile) {
+  } else if (isWings8OSOnMobile) {
     videoElement.style.willChange = 'contents';
     videoElement.style.transform = 'translate3d(0,0,0)';
     videoElement.style.backfaceVisibility = 'hidden';
@@ -712,7 +712,7 @@ export function applyVideoOptimizations(
   const hwProfile = profile || hardwareProfile;
   const isHighEnd = hwProfile?.isHighEndMobile || hwProfile?.isAppleSilicon ||
                     (hwProfile?.performanceScore && hwProfile.performanceScore >= 50) || false;
-  const isJemaOSOnMobile = isMobileJemaOS();
+  const isWings8OSOnMobile = isMobileWings8OS();
   const isMobile = hwProfile?.isMobile || detectDeviceType() !== 'desktop';
   
   if ('disablePictureInPicture' in videoElement) {
@@ -723,23 +723,23 @@ export function applyVideoOptimizations(
     (videoElement as any).disableRemotePlayback = true;
   }
   
-  applyMobileJemaOSOptimizations(videoElement, settings, isMobile, isJemaOSOnMobile);
+  applyMobileWings8OSOptimizations(videoElement, settings, isMobile, isWings8OSOnMobile);
   
   videoElement.playsInline = true;
   
-  applyCSSOptimizations(videoElement, settings, isHighEnd, isJemaOSOnMobile);
+  applyCSSOptimizations(videoElement, settings, isHighEnd, isWings8OSOnMobile);
   
   videoElement.dataset.optimized = 'true';
 }
 
 /**
- * Optimize video playback for mobile JemaOS
+ * Optimize video playback for mobile Wings8OS
  * Call this when starting playback
  */
 export function optimizeMobilePlayback(videoElement: HTMLVideoElement): void {
-  const isJemaOSOnMobile = isMobileJemaOS();
+  const isWings8OSOnMobile = isMobileWings8OS();
   
-  if (!isJemaOSOnMobile) return;
+  if (!isWings8OSOnMobile) return;
   
   // Reduce decode priority during playback
   if ('requestVideoFrameCallback' in videoElement) {
@@ -799,14 +799,14 @@ export function optimizeMobilePlayback(videoElement: HTMLVideoElement): void {
  * Get mobile-optimized video attributes
  */
 export function getMobileVideoAttributes(): Record<string, string> {
-  const isJemaOSOnMobile = isMobileJemaOS();
+  const isWings8OSOnMobile = isMobileWings8OS();
   
   const attrs: Record<string, string> = {
     'playsinline': 'true',
     'webkit-playsinline': 'true',
   };
   
-  if (isJemaOSOnMobile) {
+  if (isWings8OSOnMobile) {
     attrs['x5-playsinline'] = 'true';
     attrs['x5-video-player-type'] = 'h5';
     attrs['x5-video-player-fullscreen'] = 'false';

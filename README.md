@@ -4,7 +4,7 @@
 
 ### Professional video editing, right in your browser
 
-[![Made by Jema Technology](https://img.shields.io/badge/Made%20by-Jema%20Technology-8286ef)](https://www.jematechnology.fr)
+[![Made by Wings8 Technology](https://img.shields.io/badge/Made%20by-Wings8%20Technology-8286ef)](https://www.wings8.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![React](https://img.shields.io/badge/React-18-61dafb?logo=react&logoColor=white)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
@@ -105,7 +105,7 @@ md: 768px │ lg: 1024px │ xl: 1280px │ 2xl: 1536px
 ### Development
 
 ```bash
-git clone https://github.com/JemaOS/osivibe.git
+git clone https://github.com/Wings8-Tech/osivibe.git
 cd osivibe
 npm install
 npm run dev
@@ -155,5 +155,5 @@ git push origin feat/my-feature
 Released under the **MIT License** — see [LICENSE](LICENSE).
 
 <div align="center">
-Made with ❤️ by <a href="https://www.jematechnology.fr">Jema Technology</a>
+Made with ❤️ by <a href="https://www.wings8.org">Wings8 Technology</a>
 </div>

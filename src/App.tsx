@@ -1,4 +1,4 @@
-// Copyright (c) 2025 Jema Technology.
+// Copyright (c) 2025 Wings8 Technology.
 // Distributed under the license specified in the root directory of this project.
 
 import React, { useEffect, useState, useRef, Suspense, lazy } from 'react';
@@ -40,12 +40,12 @@ const FooterCredit: React.FC<{ compact?: boolean }> = ({ compact = false }) => {
       <p className={`${compact ? 'text-[10px]' : 'text-xs'} text-neutral-500`}>
         {t('developedBy')}{' '}
         <a
-          href="https://www.jematechnology.fr/"
+          href="https://www.wings8.org/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#757aed] hover:text-[#8b8ff2] hover:underline font-medium transition-colors"
         >
-          Jema Technology
+          Wings8 Technology
         </a>
         {' '}{t('footerSuffix')}
       </p>

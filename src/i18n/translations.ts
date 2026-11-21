@@ -1,4 +1,4 @@
-// Copyright (c) 2025 Jema Technology.
+// Copyright (c) 2025 Wings8 Technology.
 // Distributed under the license specified in the root directory of this project.
 
 export type Lang = 'en' | 'fr';
@@ -150,7 +150,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     saturation: 'Saturation ({value})',
     blur: 'Blur ({value})',
     reset: 'Reset',
-    eyedropperUnsupported: 'Your browser does not support the eyedropper. Use JemaOS or Edge.',
+    eyedropperUnsupported: 'Your browser does not support the eyedropper. Use Wings8OS or Edge.',
 
     // Transition categories
     transCategoryBasic: 'Basic',
@@ -268,23 +268,23 @@ export const translations: Record<Lang, Record<string, string>> = {
     update: 'Update',
 
     // Subscription guard
-    subscriptionRequired: 'This application requires a JemaOS Pro subscription.',
+    subscriptionRequired: 'This application requires a Wings8OS Pro subscription.',
     upgradeToPro: 'Upgrade to Pro',
     reconnect: 'Reconnect',
     reconnecting: 'Reconnecting…',
     reconnectFailed: 'Reconnection failed. Try again in a moment.',
     loading: 'Loading…',
     reconnectInProgress: 'Reconnecting…',
-    verifyingSession: 'Verifying your JemaOS session. You will be redirected automatically.',
-    loginAccountLabel: 'Jema account',
+    verifyingSession: 'Verifying your Wings8OS session. You will be redirected automatically.',
+    loginAccountLabel: 'Wings8 account',
     loginAccountPlaceholder: 'name@example.com',
     loginPasswordLabel: 'Password',
-    loginSubmit: 'Sign in with Jema',
+    loginSubmit: 'Sign in with Wings8',
     loginSubmitting: 'Signing in…',
     loginErrorCaptcha: 'Anti-robot verification required. Please try again.',
     loginErrorCaptchaTurnstile:
       'Anti-robot verification required. Complete the CAPTCHA and try again.',
-    loginErrorGeneric: 'Sign-in failed. Please check your Jema credentials.',
+    loginErrorGeneric: 'Sign-in failed. Please check your Wings8 credentials.',
 
     // Store
     newProjectDefault: 'New Project',
@@ -443,7 +443,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     saturation: 'Saturation ({value})',
     blur: 'Flou ({value})',
     reset: 'Reinitialiser',
-    eyedropperUnsupported: 'Votre navigateur ne supporte pas la pipette. Utilisez JemaOS ou Edge.',
+    eyedropperUnsupported: 'Votre navigateur ne supporte pas la pipette. Utilisez Wings8OS ou Edge.',
 
     // Transition categories
     transCategoryBasic: 'Basiques',
@@ -561,23 +561,23 @@ export const translations: Record<Lang, Record<string, string>> = {
     update: 'Mettre à jour',
 
     // Subscription guard
-    subscriptionRequired: 'Cette application nécessite un abonnement JemaOS Pro.',
+    subscriptionRequired: 'Cette application nécessite un abonnement Wings8OS Pro.',
     upgradeToPro: 'Passer à Pro',
     reconnect: 'Se reconnecter',
     reconnecting: 'Reconnexion…',
     reconnectFailed: 'La reconnexion a échoué. Réessayez dans un instant.',
     loading: 'Chargement…',
     reconnectInProgress: 'Reconnexion en cours…',
-    verifyingSession: 'Vérification de votre session JemaOS. Vous allez être redirigé automatiquement.',
-    loginAccountLabel: 'Compte Jema',
+    verifyingSession: 'Vérification de votre session Wings8OS. Vous allez être redirigé automatiquement.',
+    loginAccountLabel: 'Compte Wings8',
     loginAccountPlaceholder: 'nom@exemple.com',
     loginPasswordLabel: 'Mot de passe',
-    loginSubmit: 'Se connecter avec Jema',
+    loginSubmit: 'Se connecter avec Wings8',
     loginSubmitting: 'Connexion…',
     loginErrorCaptcha: 'Vérification anti-robot requise. Réessayez.',
     loginErrorCaptchaTurnstile:
       'Vérification anti-robot requise. Validez le CAPTCHA et réessayez.',
-    loginErrorGeneric: 'Connexion impossible. Vérifiez vos identifiants Jema.',
+    loginErrorGeneric: 'Connexion impossible. Vérifiez vos identifiants Wings8.',
 
     // Store
     newProjectDefault: 'Nouveau Projet',

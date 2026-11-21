@@ -55,7 +55,7 @@ export default defineConfig(({ mode }) => {
         manifest: {
           name: 'Osivibe - Éditeur Vidéo',
           short_name: 'Osivibe',
-          description: 'Éditeur vidéo professionnel en ligne par Jema Technology',
+          description: 'Éditeur vidéo professionnel en ligne par Wings8 Technology',
           start_url: '/',
           display: 'standalone',
           orientation: 'any',
