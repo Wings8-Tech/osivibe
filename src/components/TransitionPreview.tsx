@@ -38,8 +38,8 @@ export const TransitionPreview: React.FC<TransitionPreviewProps> = ({ type, clas
           <svg {...baseProps}>
             <defs>
               <linearGradient id={`fade-grad-${uniqueId}`} x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style={{ stopColor: '#F99634', stopOpacity: 0 }} />
-                <stop offset="100%" style={{ stopColor: '#F99634', stopOpacity: 1 }} />
+                <stop offset="0%" style={{ stopColor: 'var(--primary)', stopOpacity: 0 }} />
+                <stop offset="100%" style={{ stopColor: 'var(--primary)', stopOpacity: 1 }} />
               </linearGradient>
             </defs>
             <rect x="0" y="0" width="100" height="60" fill={`url(#fade-grad-${uniqueId})`} />
@@ -50,7 +50,7 @@ export const TransitionPreview: React.FC<TransitionPreviewProps> = ({ type, clas
         return (
           <svg {...baseProps}>
             <rect x="0" y="0" width="50" height="60" fill="#E8EAF0" />
-            <rect x="50" y="0" width="50" height="60" fill="#F99634" />
+            <rect x="50" y="0" width="50" height="60" fill="var(--primary)" />
             <path d="M 50 30 L 45 25 L 45 35 Z" fill="#FFFFFF" />
           </svg>
         );
@@ -58,7 +58,7 @@ export const TransitionPreview: React.FC<TransitionPreviewProps> = ({ type, clas
       case 'slide-right':
         return (
           <svg {...baseProps}>
-            <rect x="0" y="0" width="50" height="60" fill="#F99634" />
+            <rect x="0" y="0" width="50" height="60" fill="var(--primary)" />
             <rect x="50" y="0" width="50" height="60" fill="#E8EAF0" />
             <path d="M 50 30 L 55 25 L 55 35 Z" fill="#FFFFFF" />
           </svg>
@@ -68,7 +68,7 @@ export const TransitionPreview: React.FC<TransitionPreviewProps> = ({ type, clas
         return (
           <svg {...baseProps}>
             <rect x="0" y="0" width="100" height="30" fill="#E8EAF0" />
-            <rect x="0" y="30" width="100" height="30" fill="#F99634" />
+            <rect x="0" y="30" width="100" height="30" fill="var(--primary)" />
             <path d="M 50 30 L 45 25 L 55 25 Z" fill="#FFFFFF" />
           </svg>
         );
@@ -76,7 +76,7 @@ export const TransitionPreview: React.FC<TransitionPreviewProps> = ({ type, clas
       case 'slide-down':
         return (
           <svg {...baseProps}>
-            <rect x="0" y="0" width="100" height="30" fill="#F99634" />
+            <rect x="0" y="0" width="100" height="30" fill="var(--primary)" />
             <rect x="0" y="30" width="100" height="30" fill="#E8EAF0" />
             <path d="M 50 30 L 45 35 L 55 35 Z" fill="#FFFFFF" />
           </svg>
@@ -86,7 +86,7 @@ export const TransitionPreview: React.FC<TransitionPreviewProps> = ({ type, clas
         return (
           <svg {...baseProps}>
             <polygon points="0,0 100,0 0,60" fill="#E8EAF0" />
-            <polygon points="100,0 100,60 0,60" fill="#F99634" />
+            <polygon points="100,0 100,60 0,60" fill="var(--primary)" />
             <path d="M 50 30 L 45 25 L 50 20 Z" fill="#FFFFFF" />
           </svg>
         );
@@ -95,7 +95,7 @@ export const TransitionPreview: React.FC<TransitionPreviewProps> = ({ type, clas
         return (
           <svg {...baseProps}>
             <polygon points="0,0 100,0 100,60" fill="#E8EAF0" />
-            <polygon points="0,0 0,60 100,60" fill="#F99634" />
+            <polygon points="0,0 0,60 100,60" fill="var(--primary)" />
             <path d="M 50 30 L 55 25 L 50 20 Z" fill="#FFFFFF" />
           </svg>
         );
@@ -110,14 +110,14 @@ export const TransitionPreview: React.FC<TransitionPreviewProps> = ({ type, clas
           <svg {...baseProps}>
             {isHorizontal ? (
               <>
-                <rect x="0" y="0" width="60" height="60" fill={firstHalf ? "#E8EAF0" : "#F99634"} />
-                <rect x="60" y="0" width="40" height="60" fill={firstHalf ? "#F99634" : "#E8EAF0"} />
+                <rect x="0" y="0" width="60" height="60" fill={firstHalf ? "#E8EAF0" : "var(--primary)"} />
+                <rect x="60" y="0" width="40" height="60" fill={firstHalf ? "var(--primary)" : "#E8EAF0"} />
                 <line x1="60" y1="0" x2="60" y2="60" stroke="#FFFFFF" strokeWidth="2" />
               </>
             ) : (
               <>
-                <rect x="0" y="0" width="100" height="36" fill={firstHalf ? "#E8EAF0" : "#F99634"} />
-                <rect x="0" y="36" width="100" height="24" fill={firstHalf ? "#F99634" : "#E8EAF0"} />
+                <rect x="0" y="0" width="100" height="36" fill={firstHalf ? "#E8EAF0" : "var(--primary)"} />
+                <rect x="0" y="36" width="100" height="24" fill={firstHalf ? "var(--primary)" : "#E8EAF0"} />
                 <line x1="0" y1="36" x2="100" y2="36" stroke="#FFFFFF" strokeWidth="2" />
               </>
             )}
@@ -129,7 +129,7 @@ export const TransitionPreview: React.FC<TransitionPreviewProps> = ({ type, clas
         return (
           <svg {...baseProps}>
             <rect x="0" y="0" width="100" height="60" fill="#E8EAF0" />
-            <rect x="30" y="18" width="40" height="24" fill="#F99634" />
+            <rect x="30" y="18" width="40" height="24" fill="var(--primary)" />
             <circle cx="50" cy="30" r="15" fill="none" stroke="#FFFFFF" strokeWidth="1.5" strokeDasharray="2,2" />
           </svg>
         );
@@ -137,7 +137,7 @@ export const TransitionPreview: React.FC<TransitionPreviewProps> = ({ type, clas
       case 'zoom-out':
         return (
           <svg {...baseProps}>
-            <rect x="0" y="0" width="100" height="60" fill="#F99634" />
+            <rect x="0" y="0" width="100" height="60" fill="var(--primary)" />
             <rect x="30" y="18" width="40" height="24" fill="#E8EAF0" />
             <circle cx="50" cy="30" r="25" fill="none" stroke="#FFFFFF" strokeWidth="1.5" strokeDasharray="2,2" />
           </svg>
@@ -147,7 +147,7 @@ export const TransitionPreview: React.FC<TransitionPreviewProps> = ({ type, clas
         return (
           <svg {...baseProps}>
             <rect x="0" y="0" width="100" height="60" fill="#E8EAF0" />
-            <rect x="30" y="15" width="40" height="30" fill="#F99634" transform="rotate(15 50 30)" />
+            <rect x="30" y="15" width="40" height="30" fill="var(--primary)" transform="rotate(15 50 30)" />
             <path d="M 70 25 Q 75 20 75 15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
             <path d="M 75 15 L 72 18 L 77 20" fill="#FFFFFF" />
           </svg>
@@ -156,7 +156,7 @@ export const TransitionPreview: React.FC<TransitionPreviewProps> = ({ type, clas
       case 'rotate-out':
         return (
           <svg {...baseProps}>
-            <rect x="0" y="0" width="100" height="60" fill="#F99634" />
+            <rect x="0" y="0" width="100" height="60" fill="var(--primary)" />
             <rect x="30" y="15" width="40" height="30" fill="#E8EAF0" transform="rotate(-15 50 30)" />
             <path d="M 30 25 Q 25 20 25 15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
             <path d="M 25 15 L 28 18 L 23 20" fill="#FFFFFF" />
@@ -167,7 +167,7 @@ export const TransitionPreview: React.FC<TransitionPreviewProps> = ({ type, clas
         return (
           <svg {...baseProps}>
             <rect x="0" y="0" width="100" height="60" fill="#E8EAF0" />
-            <circle cx="50" cy="30" r="20" fill="#F99634" />
+            <circle cx="50" cy="30" r="20" fill="var(--primary)" />
             <circle cx="50" cy="30" r="20" fill="none" stroke="#FFFFFF" strokeWidth="2" />
           </svg>
         );
@@ -176,7 +176,7 @@ export const TransitionPreview: React.FC<TransitionPreviewProps> = ({ type, clas
         return (
           <svg {...baseProps}>
             <rect x="0" y="0" width="100" height="60" fill="#E8EAF0" />
-            <polygon points="50,10 70,30 50,50 30,30" fill="#F99634" />
+            <polygon points="50,10 70,30 50,50 30,30" fill="var(--primary)" />
             <polygon points="50,10 70,30 50,50 30,30" fill="none" stroke="#FFFFFF" strokeWidth="2" />
           </svg>
         );

@@ -925,7 +925,7 @@ const TimelineContextMenu = ({ contextMenu, setContextMenu, setCopiedClip, setCo
         style={{
           left: `${contextMenu.x}px`,
           top: `${contextMenu.y}px`,
-          boxShadow: '0 10px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(249, 150, 52, 0.3)',
+          boxShadow: '0 10px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgb(var(--primary-500-rgb) / 0.3)',
         }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -974,7 +974,7 @@ const TimelineContextMenu = ({ contextMenu, setContextMenu, setCopiedClip, setCo
         style={{
           left: `${contextMenu.x}px`,
           top: `${contextMenu.y}px`,
-          boxShadow: '0 10px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(249, 150, 52, 0.3)',
+          boxShadow: '0 10px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgb(var(--primary-500-rgb) / 0.3)',
         }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -1076,7 +1076,7 @@ const TimelineClipActionBar = ({ contextMenu, setContextMenu, isPhone, isMinimal
     >
       <div
         className="pointer-events-auto mx-2 mb-2 flex items-stretch gap-1 bg-[#0f0f0f] border-2 border-primary-500/50 rounded-xl p-1"
-        style={{ boxShadow: '0 10px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(249, 150, 52, 0.3)' }}
+        style={{ boxShadow: '0 10px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgb(var(--primary-500-rgb) / 0.3)' }}
         onClick={(e) => e.stopPropagation()}
       >
         <button onClick={() => handleCutClip(contextMenu.id)} className={itemClass}>
@@ -1809,7 +1809,7 @@ export const Timeline: React.FC = () => {
               aria-modal="true"
               aria-label={`${trackSettingsTrack.name} ${t('track')}`}
               className="pointer-events-auto w-full max-w-md mb-2 bg-[#0f0f0f] border-2 border-primary-500/50 rounded-xl p-2"
-              style={{ boxShadow: '0 10px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(249, 150, 52, 0.3)' }}
+              style={{ boxShadow: '0 10px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgb(var(--primary-500-rgb) / 0.3)' }}
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between gap-2 px-1 pb-1">
