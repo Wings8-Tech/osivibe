@@ -27,18 +27,7 @@ function detectInitialLang(): Lang {
     const saved = localStorage.getItem(LANG_STORAGE_KEY);
     if (saved === 'en' || saved === 'fr') return saved;
   } catch {
-    /* stockage indisponible */
-  }
-  try {
-    const candidates = navigator.languages?.length
-      ? navigator.languages
-      : [navigator.language];
-    for (const candidate of candidates) {
-      const short = (candidate || '').toLowerCase().split('-')[0];
-      if (short === 'en' || short === 'fr') return short;
-    }
-  } catch {
-    /* navigator indisponible */
+    /* storage unavailable */
   }
   return 'en';
 }
