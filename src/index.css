@@ -34,16 +34,16 @@
     --range-track: rgba(17, 24, 39, 0.12);
     --range-track-strong: rgba(17, 24, 39, 0.2);
     --range-track-faint: rgba(17, 24, 39, 0.18);
-    --slider-thumb: #F99634;
-    --slider-progress: #F99634;
+    --slider-thumb: #0B1F4B;
+    --slider-progress: #0B1F4B;
     --slider-track: #d4d4d8;
     --scrollbar-thumb: #c7c9d4;
     --scrollbar-thumb-hover: #a9acbb;
 
     /* Primary color */
-    --primary: #F99634;
-    --primary-hover: #F99634;
-    --primary-active: #F99634;
+    --primary: #0B1F4B;
+    --primary-hover: #081A3E;
+    --primary-active: #061533;
     
     /* === FOLDABLE DEVICE VARIABLES === */
     
@@ -95,6 +95,11 @@
   /* Dark theme: exact historical Osivibe palette */
   .dark {
     color-scheme: dark;
+    --primary: #F99634;
+    --primary-hover: #FEBF69;
+    --primary-active: #E2882E;
+    --slider-thumb: #F99634;
+    --slider-progress: #F99634;
     --bg-primary: #0f0f0f;
     --bg-secondary: #1a1a1a;
     --bg-tertiary: #252525;
@@ -570,7 +575,7 @@
   }
 
   .timeline-volume-slider::-moz-range-progress {
-    background: #F99634; /* primary */
+    background: var(--primary); /* primary */
     height: 4px;
     border-radius: 2px;
   }
