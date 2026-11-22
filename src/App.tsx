@@ -43,7 +43,7 @@ const FooterCredit: React.FC<{ compact?: boolean }> = ({ compact = false }) => {
           href="https://www.wings8.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F99634] hover:text-[#8b8ff2] hover:underline font-medium transition-colors"
+          className="text-[var(--primary)] hover:text-[var(--primary-hover)] hover:underline font-medium transition-colors"
         >
           Wings8 Technology
         </a>

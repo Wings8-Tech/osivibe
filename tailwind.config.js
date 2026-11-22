@@ -69,15 +69,16 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				// Primary colors (Violet accent)
+				// Primary colors (navy in light theme, orange in dark theme)
 				primary: {
-					50: '#F5F3FF',
-					100: '#E9E5FF',
-					500: '#F99634',
-					600: '#F99634',
-					700: '#F99634',
-					900: '#4C4699',
-					DEFAULT: '#F99634',
+					50: 'rgb(var(--primary-50-rgb) / <alpha-value>)',
+					100: 'rgb(var(--primary-50-rgb) / <alpha-value>)',
+					400: 'rgb(var(--primary-400-rgb) / <alpha-value>)',
+					500: 'rgb(var(--primary-500-rgb) / <alpha-value>)',
+					600: 'rgb(var(--primary-600-rgb) / <alpha-value>)',
+					700: 'rgb(var(--primary-700-rgb) / <alpha-value>)',
+					900: 'rgb(var(--primary-900-rgb) / <alpha-value>)',
+					DEFAULT: 'rgb(var(--primary-500-rgb) / <alpha-value>)',
 				},
 				// Neutral colors
 				neutral: {
@@ -103,7 +104,7 @@ module.exports = {
 				success: '#10B981',
 				error: '#EF4444',
 				warning: '#F59E0B',
-				info: '#F99634',
+				info: 'rgb(var(--primary-500-rgb) / <alpha-value>)',
 			},
 			fontFamily: {
 				sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
