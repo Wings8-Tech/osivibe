@@ -802,7 +802,7 @@ function WebLoginForm({ onSuccess }: { onSuccess?: () => void }) {
         type="submit"
         disabled={busy}
         style={{
-          background: 'linear-gradient(135deg, #E2882E 0%, #FEC069 100%)',
+          background: 'linear-gradient(135deg, #F99634 0%, #FEBF69 100%)',
           color: '#ffffff',
           padding: '0.7rem 1.5rem',
           borderRadius: '9999px',
@@ -890,7 +890,7 @@ function UpgradeScreen({ appName, onReconnect, reconnecting = false, reconnectEr
               rel="noopener noreferrer"
               style={{
                 display: 'inline-block',
-                background: 'linear-gradient(135deg, #E2882E 0%, #FEC069 100%)',
+                background: 'linear-gradient(135deg, #F99634 0%, #FEBF69 100%)',
                 color: '#fff',
                 padding: '0.875rem 2.5rem',
                 borderRadius: '9999px',
