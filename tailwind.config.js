@@ -173,8 +173,8 @@ module.exports = {
 				'glass-sm': '0 4px 16px rgba(0, 0, 0, 0.06)',
 				'glass-md': '0 8px 32px rgba(0, 0, 0, 0.1)',
 				'glass-lg': '0 12px 40px rgba(0, 0, 0, 0.15)',
-				focus: '0 0 0 3px rgba(117, 122, 237, 0.2)',
-				'glow-violet': '0 4px 20px rgba(117, 122, 237, 0.3)',
+				focus: '0 0 0 3px rgb(var(--primary-500-rgb) / 0.2)',
+				'glow-violet': '0 4px 20px rgb(var(--primary-500-rgb) / 0.3)',
 			},
 			backdropBlur: {
 				light: '15px',

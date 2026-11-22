@@ -15,7 +15,7 @@ interface I18nContextValue {
 const I18nContext = createContext<I18nContextValue | null>(null);
 
 // Langue courante (module-level, pour le code hors React).
-let activeLang: Lang = 'fr';
+let activeLang: Lang = 'en';
 
 const LANG_STORAGE_KEY = 'wings8os_lang';
 
