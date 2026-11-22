@@ -60,7 +60,7 @@ export default defineConfig(({ mode }) => {
           display: 'standalone',
           orientation: 'any',
           background_color: '#0f0f0f',
-          theme_color: '#757AED',
+          theme_color: '#F99634',
           categories: ['productivity', 'utilities', 'entertainment'],
           lang: 'fr',
           dir: 'ltr',

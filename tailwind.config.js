@@ -73,11 +73,11 @@ module.exports = {
 				primary: {
 					50: '#F5F3FF',
 					100: '#E9E5FF',
-					500: '#757AED',
-					600: '#6366F1',
-					700: '#5B64EA',
+					500: '#F99634',
+					600: '#F99634',
+					700: '#F99634',
 					900: '#4C4699',
-					DEFAULT: '#757AED',
+					DEFAULT: '#F99634',
 				},
 				// Neutral colors
 				neutral: {
@@ -103,7 +103,7 @@ module.exports = {
 				success: '#10B981',
 				error: '#EF4444',
 				warning: '#F59E0B',
-				info: '#3B82F6',
+				info: '#F99634',
 			},
 			fontFamily: {
 				sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],

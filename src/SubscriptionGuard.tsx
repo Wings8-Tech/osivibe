@@ -558,7 +558,7 @@ function Wings8OSLogo() {
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <img
         src="/logo-wings8-os.png"
-        alt="Wings8 OS"
+        alt="Wings8"
         style={{ height: '38px', width: 'auto', display: 'block' }}
       />
     </div>
@@ -571,7 +571,7 @@ function LockIcon() {
       width: '72px',
       height: '72px',
       borderRadius: '50%',
-      background: 'rgba(79, 70, 229, 0.1)',
+      background: 'rgba(249, 150, 52, 0.1)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -582,7 +582,7 @@ function LockIcon() {
         height="32"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#4f46e5"
+        stroke="#F99634"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -802,7 +802,7 @@ function WebLoginForm({ onSuccess }: { onSuccess?: () => void }) {
         type="submit"
         disabled={busy}
         style={{
-          background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+          background: 'linear-gradient(135deg, #E2882E 0%, #FEC069 100%)',
           color: '#ffffff',
           padding: '0.7rem 1.5rem',
           borderRadius: '9999px',
@@ -890,14 +890,14 @@ function UpgradeScreen({ appName, onReconnect, reconnecting = false, reconnectEr
               rel="noopener noreferrer"
               style={{
                 display: 'inline-block',
-                background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+                background: 'linear-gradient(135deg, #E2882E 0%, #FEC069 100%)',
                 color: '#fff',
                 padding: '0.875rem 2.5rem',
                 borderRadius: '9999px',
                 textDecoration: 'none',
                 fontSize: '1rem',
                 fontWeight: 600,
-                boxShadow: '0 10px 25px -5px rgba(79, 70, 229, 0.45)',
+                boxShadow: '0 10px 25px -5px rgba(249, 150, 52, 0.45)',
               }}
             >
               {t('upgradeToPro')}
@@ -910,13 +910,13 @@ function UpgradeScreen({ appName, onReconnect, reconnecting = false, reconnectEr
                 style={{
                   display: 'inline-block',
                   background: 'transparent',
-                  color: '#4f46e5',
+                  color: '#F99634',
                   padding: '0.6rem 1.5rem',
                   borderRadius: '9999px',
                   textDecoration: 'none',
                   fontSize: '0.95rem',
                   fontWeight: 600,
-                  border: '1px solid rgba(79, 70, 229, 0.4)',
+                  border: '1px solid rgba(249, 150, 52, 0.4)',
                 }}
               >
                 {t('reconnect')}
@@ -931,12 +931,12 @@ function UpgradeScreen({ appName, onReconnect, reconnecting = false, reconnectEr
                 disabled={reconnecting}
                 style={{
                   background: 'transparent',
-                  color: '#4f46e5',
+                  color: '#F99634',
                   padding: '0.6rem 1.5rem',
                   borderRadius: '9999px',
                   fontSize: '0.95rem',
                   fontWeight: 600,
-                  border: '1px solid rgba(79, 70, 229, 0.4)',
+                  border: '1px solid rgba(249, 150, 52, 0.4)',
                   cursor: reconnecting ? 'wait' : 'pointer',
                   opacity: reconnecting ? 0.6 : 1,
                 }}

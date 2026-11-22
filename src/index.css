@@ -34,16 +34,16 @@
     --range-track: rgba(17, 24, 39, 0.12);
     --range-track-strong: rgba(17, 24, 39, 0.2);
     --range-track-faint: rgba(17, 24, 39, 0.18);
-    --slider-thumb: #757AED;
-    --slider-progress: #757AED;
+    --slider-thumb: #F99634;
+    --slider-progress: #F99634;
     --slider-track: #d4d4d8;
     --scrollbar-thumb: #c7c9d4;
     --scrollbar-thumb-hover: #a9acbb;
 
     /* Primary color */
-    --primary: #757AED;
-    --primary-hover: #6366F1;
-    --primary-active: #5B64EA;
+    --primary: #F99634;
+    --primary-hover: #F99634;
+    --primary-active: #F99634;
     
     /* === FOLDABLE DEVICE VARIABLES === */
     
@@ -570,7 +570,7 @@
   }
 
   .timeline-volume-slider::-moz-range-progress {
-    background: #757AED; /* primary */
+    background: #F99634; /* primary */
     height: 4px;
     border-radius: 2px;
   }

@@ -43,8 +43,8 @@ declare global {
 const PRESET_COLORS = [
   '#FFFFFF', '#000000', '#9CA3AF', // White, Black, Gray
   '#EF4444', '#F97316', '#F59E0B', // Red, Orange, Amber
-  '#10B981', '#3B82F6', '#6366F1', // Emerald, Blue, Indigo
-  '#8B5CF6', '#EC4899', '#F43F5E'  // Violet, Pink, Rose
+  '#10B981', '#F99634', '#F99634', // Emerald, Blue, Indigo
+  '#F99634', '#EC4899', '#F43F5E'  // Violet, Pink, Rose
 ];
 
 // Helper functions extracted to reduce cognitive complexity
